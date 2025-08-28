@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्वतंत्रता: एक बहुआयामी अध्ययन</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind', sans-serif;
+            line-height: 1.8;
+        }
+        .section-title {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateX(5px);
+            color: #667eea;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">स्वतंत्रता</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#personal" class="nav-link">व्यक्तिगत</a>
+                    <a href="#constitutional" class="nav-link">संवैधानिक</a>
+                    <a href="#philosophical" class="nav-link">दार्शनिक</a>
+                    <a href="#social" class="nav-link">सामाजिक</a>
+                    <a href="#future" class="nav-link">भविष्य</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">
+                स्वतंत्रता: एक बहुआयामी अध्ययन
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8">
+                व्यक्तिगत अनुभव से लेकर संवैधानिक प्रावधानों तक की यात्रा
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">व्यक्तिगत स्वतंत्रता</h3>
+                    <p class="text-gray-600">आत्मिक और मानसिक मुक्ति की खोज</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">संवैधानिक अधिकार</h3>
+                    <p class="text-gray-600">उचित प्रतिबंध और मौलिक अधिकार</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">सामाजिक संदर्भ</h3>
+                    <p class="text-gray-600">समानता और न्याय का संतुलन</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Personal Freedom Section -->
+        <section id="personal" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 section-title">व्यक्तिगत स्वतंत्रता का अर्थ</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">प्रारंभिक अनुभव</h3>
+                    <p class="mb-4">स्वतंत्रता की पहली स्मृति अक्सर स्कूल की छुट्टी या घर से बाहर निकलने की भावना से जुड़ी होती है। यह वह क्षण होता है जब हमें पहली बार अपने निर्णय लेने का अहसास होता है।</p>
+                    
+                    <h3 class="text-xl font-semibold mb-4 mt-6 text-purple-600">पतंग का रूपक</h3>
+                    <p class="mb-4">पतंग का रूपक स्वतंत्रता को समझने का एक गहरा प्रतीक है, जिसमें ऊँचाई पर उड़ना डोर से बंधे होने के कारण ही संभव है। डोर का कटना पूर्ण स्वतंत्रता नहीं, बल्कि अलगाव है।</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <div class="mb-6">
+                        <img src="1.jpg" alt="स्वतंत्रता का प्रतीक पतंग" class="w-full h-64 object-cover rounded-lg" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-green-600">आत्मिक मुक्ति</h3>
+                    <p>व्यक्तिगत रूप से, स्वतंत्रता का सबसे बड़ा अर्थ अनावश्यक महत्वाकांक्षाओं से मुक्त होना है, जो मन को परेशान करती हैं और जीवन को बांधती हैं। यह आंतरिक शांति और संतोष की खोज है।</p>
+                </div>
+            </div>
+
+            <!-- Men's Freedom -->
+            <div class="bg-blue-50 rounded-lg p-8 mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-800">पुरुषों के लिए स्वतंत्रता</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="mb-4">आधुनिक समाज में पुरुषों के लिए स्वतंत्रता के दो अतिरिक्त आयाम हैं: स्वयं को केंद्र में मानने की भावना से मुक्त होना और उन परतों से मुक्त होना जो उन्हें रोने से रोकती हैं।</p>
+                        <p>पुरुषों को यह समझने की आवश्यकता है कि उन्हें भी दर्द होता है और उन्हें रोने की अनुमति होनी चाहिए, क्योंकि यह आवश्यक है और सहजता के लिए महत्वपूर्ण है।</p>
+                    </div>
+                    <div>
+                        <img src="2.jpg" alt="आधुनिक पुरुष की स्वतंत्रता" class="w-full h-64 object-cover rounded-lg" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Constitutional Freedom Section -->
+        <section id="constitutional" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 section-title">संवैधानिक स्वतंत्रता और प्रतिबंध</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-red-600">स्वतंत्रता की सीमाएँ</h3>
+                    <p class="mb-4">पूर्ण स्वतंत्रता संभव नहीं है, क्योंकि व्यक्ति अपनी भावनाओं, आनुवंशिक संरचना, बुद्धि, शारीरिक विशेषताओं, बचपन के मूल्यों और सामाजिक-आर्थिक परिस्थितियों से बंधा होता है।</p>
+                    
+                    <h3 class="text-xl font-semibold mb-4 mt-6 text-orange-600">उचित प्रतिबंध</h3>
+                    <p class="mb-4">भारतीय संविधान में प्रत्येक अधिकार पर <strong>उचित प्रतिबंध</strong> (reasonable restrictions) लगाए गए हैं, जैसे अनुच्छेद 19 (2-6), 25, 26, और 30 में वर्णित हैं।</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">न्यायपालिका की भूमिका</h3>
+                    <p class="mb-4">प्रतिबंधों की उचितता का निर्धारण सर्वोच्च न्यायालय या उच्च न्यायालयों द्वारा किया जाता है, जिनके पास न्यायिक समीक्षा का अधिकार है।</p>
+                    
+                    <div class="bg-gray-100 p-4 rounded-lg mt-4">
+                        <h4 class="font-semibold mb-2">न्यायिक मानदंड:</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>प्रतिबंध अधिकार के मूल स्वरूप को न बदलें</li>
+                            <li>आनुपातिकता का सिद्धांत</li>
+                            <li>नेक्सस (सीधा संबंध)</li>
+                            <li>संवैधानिक रूप से वैध उद्देश्य</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flowchart Placeholder -->
+            <div class="bg-white rounded-lg p-8 shadow-md mb-12">
+                <h3 class="text-xl font-semibold mb-6 text-center text-gray-700">न्यायपालिका द्वारा प्रतिबंध निर्धारण प्रक्रिया</h3>
+                <img src="3.jpg" alt="न्यायिक प्रक्रिया फ्लोचार्ट" class="w-full h-64 object-contain rounded-lg mx-auto" onerror="this.style.display='none'">
+            </div>
+
+            <!-- Positive and Negative Freedom -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-green-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold mb-4 text-green-800">सकारात्मक स्वतंत्रता</h3>
+                    <p>सकारात्मक स्वतंत्रता का अर्थ अपनी इच्छा अनुसार कार्य करने की क्षमता है, जैसे अपनी पसंद का अध्ययन करना, रोजगार प्राप्त करना, या यात्रा करने के लिए पर्याप्त साधन होना।</p>
+                </div>
+                <div class="bg-red-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold mb-4 text-red-800">नकारात्मक स्वतंत्रता</h3>
+                    <p>नकारात्मक स्वतंत्रता का अर्थ बंधनों की अनुपस्थिति है, जैसे जेल में न होना या बिना रोक-टोक कहीं भी घूमने की स्वतंत्रता।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Freedom Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 section-title">मीडिया की स्वतंत्रता</h2>
+            
+            <div class="bg-white rounded-lg p-8 shadow-md">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">वर्तमान स्थिति</h3>
+                        <p class="mb-4">भारत में मीडिया की स्वतंत्रता की स्थिति अंतरराष्ट्रीय रिपोर्टों के आधार पर समझी जा सकती है, जैसे <strong>रिपोर्टर्स विदाउट बॉर्डर्स</strong> के विश्व प्रेस स्वतंत्रता सूचकांक में भारत 180 देशों में 151वें स्थान पर है।</p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6 text-purple-600">आदर्श पत्रकारिता</h3>
+                        <p>एक आदर्श पत्रकार वह है जो सरकार का न तो समर्थक हो और न ही विरोधी, बल्कि वस्तुनिष्ठ तरीके से तथ्यों को प्रस्तुत करे।</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-red-600">चुनौतियाँ</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"></div>
+                                <span>स्वामित्व का संकेंद्रण</span>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"></div>
+                                <span>पत्रकारों की कमजोर स्थिति</span>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"></div>
+                                <span>शारीरिक हिंसा और भय</span>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"></div>
+                                <span>सरकारी दबाव और लालच</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophical Section -->
+        <section id="philosophical" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 section-title">दार्शनिक परिप्रेक्ष्य</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-600">भारतीय दर्शन में मोक्ष</h3>
+                    <p class="mb-4">भारतीय दर्शन में <strong>मोक्ष</strong>, <strong>मुक्ति</strong>, <strong>निर्वाण</strong>, <strong>कैवल्य</strong> जैसे शब्द <strong>कर्म बंधन से स्वतंत्रता</strong> और <strong>पुनर्जन्म के चक्र से मुक्ति</strong> को दर्शाते हैं।</p>
+                    <p>भारतीय दर्शन में यह माना जाता है कि संसार दुखों से भरा है, और पुनर्जन्म भी दुख का प्रतीक है।</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">पश्चिमी दर्शन में मुक्ति</h3>
+                    <p class="mb-4">सेमिटिक धर्मों में मुक्ति का अर्थ <strong>स्वर्ग</strong> या <strong>ईडन गार्डन</strong> में वापस लौटना है, जिसे आदम और हव्वा के <strong>आदि पाप</strong> के कारण खो दिया गया था।</p>
+                    <p>इन धर्मों में मुक्ति का एकमात्र मार्ग ईश्वर से प्रार्थना और क्षमा याचना है।</p>
+                </div>
+            </div>
+
+            <!-- Determinism vs Free Will -->
+            <div class="bg-gray-100 rounded-lg p-8 mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">नियतिवाद बनाम स्वतंत्र इच्छा</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-3 text-red-600">नियतिवाद</h4>
+                        <p class="mb-3">नियतिवाद का विचार है कि जो कुछ भी होता है वह पूर्वनिर्धारित होता है, और मनुष्य केवल एक निमित्त मात्र है; पत्ता भी ईश्वर की इच्छा के बिना नहीं हिलता।</p>
+                        <p class="text-sm text-gray-600">- सिगमंड फ्रायड, सैम हैरिस</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-3 text-green-600">स्वतंत्र इच्छा</h4>
+                        <p class="mb-3">स्वतंत्र इच्छा का अर्थ है सोचने और कार्य करने की क्षमता, विकल्पों का होना, और किसी मजबूरी के तहत न होना; न्यायिक प्रणाली इसी पर आधारित है।</p>
+                        <p class="text-sm text-gray-600">- संगतवाद का सिद्धांत</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sartre's Philosophy -->
+            <div class="bg-blue-50 rounded-lg p-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">सार्त्र का दर्शन: स्वतंत्र होने का अभिशाप</h3>
+                <p class="mb-4"><strong>ज्यां-पॉल सार्त्र</strong> के अनुसार, मनुष्य <strong>स्वतंत्र होने के लिए अभिशप्त</strong> है, क्योंकि ईश्वर नहीं है, और इसलिए मनुष्य को अपने अस्तित्व का अर्थ स्वयं परिभाषित करना होता है।</p>
+                <p>स्वतंत्रता का अर्थ है निर्णय लेने की क्षमता और विकल्पों में से सही विकल्प चुनना, जो एक मजबूरी है क्योंकि निर्णय लेना अनिवार्य है (निर्णय न लेना भी एक निर्णय है)।</p>
+            </div>
+        </section>
+
+        <!-- Social Perspective Section -->
+        <section id="social" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 section-title">सामाजिक परिप्रेक्ष्य में स्वतंत्रता</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">सामाजिक ढाँचे का प्रभाव</h3>
+                    <p class="mb-4">व्यक्ति की स्वतंत्रता परिवार, धर्म, जाति, समुदाय, आर्थिक स्थिति और लिंग जैसे सामाजिक ढाँचों से प्रभावित होती है।</p>
+                    
+                    <p class="mb-4">माता-पिता और बच्चों के बीच संबंध में, माता-पिता अक्सर बच्चों की स्वतंत्रता को नियंत्रित करते हैं, कभी-कभी असुरक्षा की भावना के कारण।</p>
+                    
+                    <p><strong>LGBTQ+</strong>, अल्पसंख्यक, एससी, एसटी जैसे वंचित वर्ग मुख्यधारा के लोगों की तुलना में कम स्वतंत्र होते हैं, क्योंकि समाज उन्हें पूरी तरह स्वीकार नहीं करता है।</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <img src="4.jpg" alt="सामाजिक समानता का प्रतीक" class="w-full h-64 object-cover rounded-lg mb-6" onerror="this.style.display='none'">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">असमान वितरण</h3>
+                    <p>समाज में स्वतंत्रता का वितरण असमान है, जिसमें बहुसंख्यक धर्म, उच्च जाति/नस्ल के पुरुष शीर्ष पर होते हैं, जबकि अल्पसंख्यक, गरीब, महिलाएँ और तीसरे लिंग के लोग निचले पायदान पर होते हैं।</p>
+                </div>
+            </div>
+
+            <!-- Women's Freedom -->
+            <div class="bg-pink-50 rounded-lg p-8 mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-pink-800">महिलाओं की स्वतंत्रता</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="mb-4">पारंपरिक भारतीय पारिवारिक व्यवस्था में गृहिणियों के लिए सच्ची स्वतंत्रता महसूस करना बहुत मुश्किल है, क्योंकि उनके घरेलू कार्य को उतना सम्मान नहीं मिलता जितना बाहर के काम को मिलता है।</p>
+                        
+                        <p class="mb-4">आर्थिक स्वतंत्रता, शिक्षा और सामाजिक खुलापन महिलाओं के आत्मविश्वास को बढ़ाते हैं और उन्हें पारंपरिक बंधनों से मुक्त होने में मदद करते हैं।</p>
+                    </div>
+                    
+                    <div>
+                        <img src="5.jpg" alt="आधुनिक भारतीय महिला की स्वतंत्रता" class="w-full h-64 object-cover rounded-lg" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Freedom vs License -->
+            <div class="bg-yellow-50 rounded-lg p-8">
+                <h3 class="text-2xl font-semibold mb-6 text-yellow-800">स्वतंत्रता बनाम लाइसेंस</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="mb-4"><strong>स्वतंत्रता</strong> और <strong>स्वतंत्रता</strong> शाब्दिक रूप से समान हैं, लेकिन स्वतंत्रता में सीमाएं होती हैं, जबकि अनियंत्रित स्वतंत्रता को <strong>लाइसेंस</strong> कहा जाता है।</p>
+                        
+                        <p>जंगल की स्वतंत्रता में हर पल खतरे का डर रहता है, जबकि सभ्य समाज में नियंत्रण और नियम होते हैं जो सुरक्षा प्रदान करते हैं।</p>
+                    </div>
+                    
+                    <div>
+                        <p class="mb-4">समाज के विकास के साथ स्वतंत्रता का वितरण धीरे-धीरे अधिक समान होता है, लेकिन यह एक सदियों लंबी प्रक्रिया है।</p>
+                        
+                        <p>संबंधों में असहमति को शांतिपूर्ण ढंग से सुलझाना चाहिए, और यदि संबंध असहनीय हो जाएं, तो नियमों के अनुसार अलग होने का विकल्प चुनना चाहिए।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future and AI Section -->
+        <section id="future" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 section-title">AI और डिजिटल युग में स्वतंत्रता</h2>
+            
+            <div class="bg-white rounded-lg p-8 shadow-md mb-12">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">चुनौतियाँ</h3>
+                        <p class="mb-4">एल्गोरिदम और AI भविष्य में हमारी पसंद और स्वतंत्रता को सीमित कर सकते हैं, क्योंकि वे हमारे डिजिटल पदचिह्नों के आधार पर हमारे व्यवहार को अत्यधिक अनुकूलित करते हैं।</p>
+                        
+                        <p class="mb-4">भविष्य में AI के कारण कई नौकरियाँ खत्म होंगी, जिससे बेरोजगारी बढ़ेगी और सरकारों को <strong>यूनिवर्सल बेसिक इनकम</strong> जैसी नीतियों पर विचार करना पड़ सकता है।</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-600">अवसर</h3>
+                        <p class="mb-4">AI चिकित्सा निदान, कृषि और अन्य क्षेत्रों में अत्यधिक सटीकता और दक्षता लाएगा, जिससे मानव जीवन प्रत्याशा बढ़ेगी और कई बीमारियाँ ठीक हो जाएंगी।</p>
+                        
+                        <p>हालांकि, AI के कारण मानव जीवन में <strong>अर्थहीनता</strong>, <strong>अलगाव</strong> और <strong>शक्तिहीनता</strong> की भावना बढ़ सकती है, क्योंकि काम जो हमें परिभाषित करता है, वह कम हो जाएगा।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mind Map Placeholder -->
+            <div class="bg-gray-100 rounded-lg p-8">
+                <h3 class="text-xl font-semibold mb-6 text-center text-gray-700">स्वतंत्रता के विभिन्न आयामों का माइंड मैप</h3>
+                <img src="6.jpg" alt="स्वतंत्रता के विभिन्न आयामों का माइंड मैप" class="w-full h-96 object-contain rounded-lg mx-auto" onerror="this.style.display='none'">
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-white text-center">
+            <h2 class="text-3xl font-bold mb-6">स्वतंत्रता: एक सतत यात्रा</h2>
+            <p class="text-xl mb-8">स्वतंत्रता कोई अंतिम गंतव्य नहीं है, बल्कि एक सतत यात्रा है जिसमें व्यक्तिगत विकास, सामाजिक समानता और संवैधानिक संरक्षण का सामंजस्य आवश्यक है।</p>
+            <p class="text-lg">यह संतुलन ही वास्तविक स्वतंत्रता की ओर ले जाता है।</p>
+        </section>
+    </main>
+
+   <!-- ====== Footer Start ====== -->
+<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300 py-8 relative overflow-hidden">
+  <div class="container mx-auto px-4">
+
+    <!-- Top Section Center -->
+    <div class="text-center">
+      <!-- Logo / Branding -->
+      <h2 class="text-2xl sm:text-3xl font-bold text-green-400 mb-3">SKZBlog</h2>
+
+      <!-- Live Date & Time in Hindi -->
+      <p id="datetime" class="mb-6 text-sm sm:text-base text-gray-400"></p>
+    </div>
+
+    <!-- Social Icons as Buttons -->
+    <div class="flex justify-center flex-wrap gap-4 mb-6">
+      <a href="https://x.com/sumansauravkss" target="_blank" 
+         class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <i class="fab fa-x-twitter text-xl"></i> X (Twitter)
+      </a>
+
+      <a href="https://www.linkedin.com/in/suman-saurav-503524265/" target="_blank" 
+         class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <i class="fab fa-linkedin text-xl"></i> LinkedIn
+      </a>
+
+      <a href="https://www.facebook.com/Zack387" target="_blank" 
+         class="flex items-center gap-2 bg-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <i class="fab fa-facebook text-xl"></i> Facebook
+      </a>
+
+      <a href="https://www.instagram.com/suman__saurav_902" target="_blank" 
+         class="flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <i class="fab fa-instagram text-xl"></i> Instagram
+      </a>
+    </div>
+
+    <!-- Bottom Section with Copyright + Back to Top -->
+    <div class="flex justify-between items-center mt-6 border-t border-gray-700 pt-4 text-sm sm:text-base text-gray-400">
+      <p>
+        © <span id="year"></span> Managed & Developed by 
+        <span class="font-semibold text-green-400">Suman Saurav</span>
+      </p>
+
+      <!-- Back to Top Button (Inside Footer Right) -->
+      <button id="backToTop" class="bg-green-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-green-600 hover:scale-105 transition-all duration-300" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- FontAwesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Scripts -->
+<script>
+  // Auto Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Live Date & Time in Hindi
+  function updateDateTime() {
+    const now = new Date();
+    const options = { 
+      weekday: 'long', year: 'numeric', month: 'long', 
+      day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit',
+      hour12: true
+    };
+    document.getElementById("datetime").textContent = now.toLocaleString('hi-IN', options);
+  }
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+
+  // Back to Top Button Click Action
+  document.getElementById("backToTop").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
